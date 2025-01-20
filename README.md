@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# Project on Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is about the api fetching and displaying the json data.
+The project name is "UserManagement".
 
-## Available Scripts
+## **Objective**
 
-In the project directory, you can run:
+A React.js application to manage users, allowing search, filtering, and detailed views fetched from an external API.
 
-### `npm start`
+## Project Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Create a New React Project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   Use Create React App or Vite (recommended for better performance) to initialize the project.
+   Run the following command:
 
-### `npm test`
+   ```bash
+   npx create-react-app user-management
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install Dependencies
 
-### `npm run build`
+   ```bash
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Steps to Clone Repository
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Open a Terminal or Command Prompt.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git --version
+   ```
 
-### `npm run eject`
+2. Clone the Repository.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   git clone https://github.com/srimani0723/UserManagement.git
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Navigate to the Project Directory.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   cd user-management
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Install Dependencies
 
-## Learn More
+   ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Run the Application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   npm start
+   ```
 
-### Code Splitting
+6. Access the Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   Open your Browser and go to:
+   [http://localhost:3000/](http://localhost:3000/)
 
-### Analyzing the Bundle Size
+## Key Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Ensure Node.js is installed on your system. You can download it from [Node.js](https://nodejs.org/en).
 
-### Making a Progressive Web App
+# Technologies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- React js - UI Library
+- Redux - State Management
+- Tailwind - Css styling
+- React Icons - Icons
 
-### Advanced Configuration
+# Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Searching by name
+2. Sorting A-Z, Z-A and Relevant
+3. Pagination
+4. Dark/Light Mode
+5. Respponsive Design
 
-### Deployment
+# Overview
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Deployment
 
-### `npm run build` fails to minify
+> Deployed in the vercel app for host
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Demo Link
+
+> Vercel Deploymented Link
+
+[https://srimani-user-management.vercel.app/](https://srimani-user-management.vercel.app/)
