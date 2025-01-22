@@ -41,7 +41,7 @@ A React.js application to manage users, allowing search, filtering, and detailed
 3. Navigate to the Project Directory.
 
    ```bash
-   cd user-management
+   cd UserManagement
    ```
 
 4. Install Dependencies
@@ -91,3 +91,21 @@ Ensure Node.js is installed on your system. You can download it from [Node.js](h
 > Vercel Deploymented Link
 
 [https://srimani-user-management.vercel.app/](https://srimani-user-management.vercel.app/)
+
+# Images
+
+> showing some images of the project
+
+## LightMode Images
+
+![Home](https://github.com/user-attachments/assets/bb918bc9-0b10-4ce2-b0a1-ac8320f12115)
+![Userdetails](https://github.com/user-attachments/assets/33a78dcb-00c3-4b55-ac57-3e0f3057268f)
+![small Home lightmode](https://github.com/user-attachments/assets/a849b20e-30c5-40d6-bf25-02aa9b8acd4a)
+![small userdetails lightmode](https://github.com/user-attachments/assets/b65732dc-035c-4d9c-946f-831b8fecfbab)
+
+## DarkMode Images
+
+![medium-large Home darkmode](https://github.com/user-attachments/assets/9d4f7461-375f-4a40-9173-2c4948421325)
+![medium-large Userdetails darkmode](https://github.com/user-attachments/assets/6c63de6c-6d24-421b-b7d4-de19e6602d49)
+![small Home darkmode](https://github.com/user-attachments/assets/063b2550-bb8c-4aa4-a680-e5587c2308ea)
+![small userdetails darkmode](https://github.com/user-attachments/assets/15ddc624-a93f-488b-b85a-f0bdc5f031b5)

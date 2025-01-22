@@ -1,24 +1,37 @@
 import React, { useEffect } from "react";
 import Header from "../Header";
-import { useNavigate } from "react-router";
-import { useSelector } from "react-redux";
+import { useNavigate, useLocation } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
 import { FaUser, FaArrowLeft, FaBuilding } from "react-icons/fa";
+import { BounceLoading } from "respinner";
 import {
   MdOutlineEmail,
   MdWeb,
   MdOutlinePhoneInTalk,
   MdContacts,
 } from "react-icons/md";
+import { FetchUserDetailsData } from "../Redux/middleware";
+
+const apiStatusConstraints = {
+  inProgress: "IN_PROGRESS",
+  success: "SUCCESS",
+  failure: "FAILURE",
+  initial: "INITIAL",
+};
 
 function UserDetail() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const dispatch = useDispatch();
+
+  const userId = location.pathname.split("/").at(-1);
 
   const { darkTheme } = useSelector((store) => {
     return store.ThemeState;
   });
 
-  const { userDetailsView } = useSelector((store) => {
-    return store.UserState;
+  const { userDetails, apiStatus } = useSelector((store) => {
+    return store.UserDetailsState;
   });
 
   const onReturnHome = () => {
@@ -26,10 +39,8 @@ function UserDetail() {
   };
 
   useEffect(() => {
-    if (userDetailsView === null) {
-      navigate("/");
-    }
-  }, [navigate, userDetailsView]);
+    dispatch(FetchUserDetailsData(userId));
+  }, [dispatch, userId]);
 
   const onFailureView = () => {
     return (
@@ -40,7 +51,7 @@ function UserDetail() {
   };
 
   const onSuccessView = () => {
-    const { name, email, phone, company, website } = userDetailsView;
+    const { name, email, phone, company, website } = userDetails;
 
     return (
       <div
@@ -117,8 +128,24 @@ function UserDetail() {
     );
   };
 
+  const onProgressView = () => {
+    return (
+      <div className="w-full min-h-[60vh] flex items-center justify-center">
+        <BounceLoading fill="skyblue" />
+      </div>
+    );
+  };
+
   const displayUserDetails = () => {
-    return userDetailsView !== null ? onSuccessView() : onFailureView();
+    if (apiStatus === apiStatusConstraints.success) {
+      return onSuccessView();
+    } else if (apiStatus === apiStatusConstraints.failure) {
+      return onFailureView();
+    } else if (apiStatus === apiStatusConstraints.inProgress) {
+      return onProgressView();
+    } else {
+      return null;
+    }
   };
 
   return (
